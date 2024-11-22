@@ -1,0 +1,118 @@
+/* Sidebar Container */
+.menu-sidebar {
+    width: 97px;
+    background-color: #191919;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #191919;
+    border-right: 1px solid #39424f;
+}
+
+/* Hide Scrollbar for Firefox */
+.menu-sidebar {
+    scrollbar-width: none;
+}
+
+.menu-sidebar::-webkit-scrollbar-track {
+    background-color: #191919;
+    border-radius: 8px;
+}
+
+.menu-sidebar::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 8px;
+    border: 2px solid #191919;
+}
+
+.menu-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Sidebar Wrapper */
+.menu-sidebar-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+
+.icon {
+    border-bottom: 1px solid #39424f;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    img {
+        width: 50px;
+        height: auto;
+        padding: 23px 0px;
+
+    }
+}
+
+/* Main Menu */
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+    border-bottom: 1px solid #39424c;
+    width: 100%;
+}
+
+/* Menu Item */
+.menu-item {
+    margin-bottom: 20px;
+}
+
+/* Menu Link */
+.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Icon Styles */
+.menu-link i {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-sidebar {
+        width: 60px;
+    }
+
+    .menu-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-link i {
+        font-size: 20px;
+    }
+}
